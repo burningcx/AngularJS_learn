@@ -1,0 +1,11 @@
+http://www.zhihu.com/question/36960249
+
+著作权归作者所有。
+商业转载请联系作者获得授权，非商业转载请注明出处。
+作者：徐飞
+链接：http://www.zhihu.com/question/36960249/answer/69787268
+来源：知乎
+
+如果你把controller不放在路由上，而是放在ion-content内部，直接用ng-controller加上，应该就可以。
+目测上面有指令自己创建了一级作用域，所以，ng-model取值的时候是通过原型继承获得了值，但是赋值的时候在内部作用域上创建了新变量。
+细节原理看我这篇讲解：https://github.com/xufei/blog/issues/18
